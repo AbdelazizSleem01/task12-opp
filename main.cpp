@@ -5,7 +5,6 @@
 
 namespace HospitalSystem
 {
-
     using std::cout;
     using std::make_shared;
     using std::shared_ptr;
@@ -196,6 +195,13 @@ int main()
     auto a1 = make_shared<Appointment>(4001, p1, d1, "08/01/2024 10:00 AM");
     auto pr1 = make_shared<Prescription>(5001, p1, d1, "Take one pill daily");
 
+    // Displaying all details
+    p1->getMedicalHistory();
+    d1->getDetails();
+    n1->getDetails();
+    a1->schedule();
+    pr1->addMedicine("Ibuprofen");
+    pr1->getDetails();
+
+    return 0;
 }
-
-
